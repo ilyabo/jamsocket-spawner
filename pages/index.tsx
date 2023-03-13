@@ -3,8 +3,8 @@ import Image from "next/image";
 import {useEffect, useState} from "react";
 
 export default function Home() {
-  const [spawnedUrl, setSpawnedUrl] = useState<string>();
   const [error, setError] = useState<boolean>(false);
+  const [spawnedUrl, setSpawnedUrl] = useState<string>();
   useEffect(() => {
     const spawn = async () => {
       const response = await fetch("/api/spawn");
@@ -30,7 +30,7 @@ export default function Home() {
       </Head>
       <main>
         {spawnedUrl ? (
-          <iframe src={`${spawnedUrl}`} />
+          <iframe src={`${spawnedUrl}`} seamless scrolling="no" />
         ) : (
           <div
             style={{

@@ -9,4 +9,5 @@ iframe {
   height: 100%;
   position: absolute;
   border: none;
+  overflow: hidden;
 }
