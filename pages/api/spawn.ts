@@ -13,8 +13,6 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<ResponseData>
 ) {
-  console.log(`${BASE_URL}/${USERNAME}/service/${SERVICE}/spawn`);
-
   const fetchResponse = await fetch(
     `${BASE_URL}/user/${USERNAME}/service/${SERVICE}/spawn`,
     {
@@ -37,6 +35,5 @@ export default async function handler(
     return;
   }
   const responseJson = await fetchResponse.json();
-  console.log(responseJson);
   res.status(200).json(responseJson);
 }
