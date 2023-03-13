@@ -1,4 +1,4 @@
-Jamsocket App spawner
+[Jamsocket](https://jamsocket.com/) App spawner
 
 ## Development
 
